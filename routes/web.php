@@ -12,6 +12,7 @@ use App\Http\Controllers\HospitalizationReportController;
 use App\Http\Controllers\Auth\AuthController;
 use App\Http\Controllers\DoctorController;
 use App\Http\Controllers\RequestController;
+use App\Http\Controllers\SecretaireController;
 
 // Routes pour les patients
 Route::get('/patients', [PatientController::class, 'index'])->name('patients.index');
@@ -134,3 +135,8 @@ Route::get('/hospitalization-reports/{id}/pdf', [HospitalizationReportController
     Route::get('dashboardd', [AuthController::class, 'dashboardd'])->name('dashboardd');
     Route::get('dashboarddd', [AuthController::class, 'dashboarddd'])->name('dashboarddd');
     Route::get('/request', [RequestController::class, 'index'])->name('request.index');
+
+
+
+
+    Route::get('/secretaire', [SecretaireController::class, 'index'])->name('secretaires.index');
