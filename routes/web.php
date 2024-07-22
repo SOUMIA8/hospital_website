@@ -13,6 +13,10 @@ use App\Http\Controllers\Auth\AuthController;
 use App\Http\Controllers\DoctorController;
 use App\Http\Controllers\RequestController;
 use App\Http\Controllers\SecretaireController;
+use App\Http\Controllers\AppointmentController;
+use App\Http\Controllers\ChefController;
+use App\Http\Controllers\AppointmentControllerNew;
+
 
 // Routes pour les patients
 Route::get('/patients', [PatientController::class, 'index'])->name('patients.index');
@@ -24,14 +28,16 @@ Route::put('/patients/{id}', [PatientController::class, 'update'])->name('patien
 Route::delete('/patients/{id}', [PatientController::class, 'destroy'])->name('patients.destroy');
 Route::get('/patients/search', [PatientController::class, 'search'])->name('patients.search');
 
-// Routes pour les rendez-vous
-Route::get('/rendez-vous', [RendezVousController::class, 'index'])->name('rendezvous.index');
-Route::get('/rendez-vous/create', [RendezVousController::class, 'create'])->name('rendezvous.create');
-Route::post('/rendez-vous', [RendezVousController::class, 'store'])->name('rendezvous.store');
-Route::get('/rendez-vous/{id}', [RendezVousController::class, 'show'])->name('rendezvous.show');
-Route::get('/rendez-vous/{id}/edit', [RendezVousController::class, 'edit'])->name('rendezvous.edit');
-Route::put('/rendez-vous/{id}', [RendezVousController::class, 'update'])->name('rendezvous.update');
-Route::delete('/rendez-vous/{id}', [RendezVousController::class, 'destroy'])->name('rendezvous.destroy');
+     //Appointment
+
+
+Route::get('/appointments', [AppointmentControllerNew::class, 'index'])->name('appointments.index');
+Route::get('/appointments/create', [AppointmentControllerNew::class, 'create'])->name('appointments.create');
+Route::post('/appointments', [AppointmentControllerNew::class, 'store'])->name('appointments.store');
+Route::get('/appointments/{id}', [AppointmentControllerNew::class, 'show'])->name('appointments.show');
+Route::get('/appointments/{id}/edit', [AppointmentControllerNew::class, 'edit'])->name('appointments.edit');
+Route::put('/appointments/{id}', [AppointmentControllerNew::class, 'update'])->name('appointments.update');
+Route::delete('/appointments/{id}', [AppointmentControllerNew::class, 'destroy'])->name('appointments.destroy');
 // Routes pour les factures
 Route::get('/factures', [FactureController::class, 'index'])->name('factures.index');
 Route::get('/factures/create', [FactureController::class, 'create'])->name('factures.create');
@@ -44,7 +50,7 @@ Route::delete('/factures/{id}', [FactureController::class, 'destroy'])->name('fa
 
 
 
-Route::post('/rendezvous', [RendezVousController::class, 'store'])->name('rendezvous.store');
+// Route::post('/rendezvous', [RendezVousController::class, 'store'])->name('rendezvous.store');
 
 
 Route::get('/user', [HomeController::class, 'index'])->name('utilisateur.acceuil');
@@ -134,9 +140,24 @@ Route::get('/hospitalization-reports/{id}/pdf', [HospitalizationReportController
     Route::post('logout', [AuthController::class, 'logout'])->name('logout');
     Route::get('dashboardd', [AuthController::class, 'dashboardd'])->name('dashboardd');
     Route::get('dashboarddd', [AuthController::class, 'dashboarddd'])->name('dashboarddd');
+    Route::get('dashboardddd', [AuthController::class, 'dashboardddd'])->name('dashboardddd');
     Route::get('/request', [RequestController::class, 'index'])->name('request.index');
 
 
 
 
     Route::get('/secretaire', [SecretaireController::class, 'index'])->name('secretaires.index');
+
+
+
+
+    use App\Http\Controllers\ChefControlleur;
+
+Route::get('/medecins', [ChefController::class, 'index'])->name('medecins.index');
+Route::get('/medecins/create', [ChefController::class, 'create'])->name('medecins.create');
+Route::post('/medecins', [ChefController::class, 'store'])->name('medecins.store');
+Route::get('/medecins/{id}', [ChefController::class, 'show'])->name('medecins.show');
+Route::get('/medecins/{id}/edit', [ChefController::class, 'edit'])->name('medecins.edit');
+Route::put('/medecins/{id}', [ChefController::class, 'update'])->name('medecins.update');
+Route::delete('/medecins/{id}', [ChefController::class, 'destroy'])->name('medecins.destroy');
+Route::get('/medecins/search', [ChefController::class, 'search'])->name('medecins.search');

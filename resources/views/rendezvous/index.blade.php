@@ -1,29 +1,34 @@
-<!-- resources/views/rendez-vous/index.blade.php -->
 @extends('layouts.app')
 
 @section('content')
     <div class="container">
         <h2>Liste des Rendez-vous</h2>
-        <a href="{{ route('rendezvous.create') }}" class="btn btn-primary mb-3">Ajouter un Rendez-vous</a>
+        <a href="{{ route('appointments.create') }}" class="btn btn-primary mb-3">Ajouter un Rendez-vous</a>
         <table class="table">
             <thead>
                 <tr>
                     <th>Date et Heure</th>
                     <th>Patient</th>
                     <th>Médecin</th>
+                    <th>Secrétaire</th>
                     <th>Actions</th>
                 </tr>
             </thead>
             <tbody>
-                @foreach ($rendezVous as $rdv)
+                @foreach ($appointments as $appointment)
                     <tr>
-                        <td>{{ $rdv->Date_heure }}</td>
-                        <td>{{ $rdv->patient->Nom_p }} {{ $rdv->patient->Prenom_p }}</td>
-                        <td>{{ $rdv->medecin->Nom_m }} {{ $rdv->medecin->Prenom_m }}</td>
+                        <td>{{ $appointment->Date_heure_ }}</td>
+                        <td>{{ $appointment->nom_patient_ }}</td>
+                        <td>{{ $appointment->nom_medecin_ }}</td>
+                        <td>{{ $appointment->nom_secretaire_ }}</td>
                         <td>
-                            <a href="{{ route('rendezvous.show', $rdv->id) }}" class="btn btn-info ">Voir</a>
-                            <a href="{{ route('rendezvous.edit', $rdv->id) }}" class="btn btn-primary ">Modifier</a>
-                            <!-- Ajouter un bouton pour supprimer si nécessaire -->
+                            <a href="{{ route('appointments.show', $appointment->id) }}" class="btn btn-info">Voir</a>
+                            <a href="{{ route('appointments.edit', $appointment->id) }}" class="btn btn-warning">Modifier</a>
+                            <form action="{{ route('appointments.destroy', $appointment->id) }}" method="POST" class="d-inline">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Êtes-vous sûr de vouloir supprimer ce rendez-vous ?')" style="height:38px">Supprimer</button>
+                            </form>
                         </td>
                     </tr>
                 @endforeach

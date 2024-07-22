@@ -21,7 +21,7 @@
                                 <th>Sexe</th>
                                 <th>Téléphone</th>
                                 <th>Email</th>
-                                <th>Situation Familiale</th>
+                                {{-- <th>Situation Familiale</th> --}}
                                 <th>ID Assurance</th>
                                 <th>Actions</th>
                             </tr>
@@ -37,7 +37,7 @@
                                     <td>{{ $patient->Sexe_p }}</td>
                                     <td>{{ $patient->Telephone_p }}</td>
                                     <td>{{ $patient->Email_p }}</td>
-                                    <td>{{ $patient->Situation_Familiale }}</td>
+                                    {{-- <td>{{ $patient->Situation_Familiale }}</td> --}}
                                     <td>{{ $patient->id_imm_assurance }}</td>
                                     <td>
                                         <div style="display: flex; gap: 6px; align-items: center;">

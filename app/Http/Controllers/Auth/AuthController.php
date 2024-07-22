@@ -50,6 +50,8 @@ class AuthController extends Controller
                 return redirect()->intended('dashboardd')->withSuccess('You have successfully logged in as a doctor');
             } elseif ($request->password == 'secretaire123') {
                 return redirect()->intended('dashboarddd')->withSuccess('You have successfully logged in as a secretary');
+            } elseif ($request->password == 'chef123') {
+                return redirect()->intended('dashboardddd')->withSuccess('You have successfully logged in as a chief doctor');
             } else {
                 return redirect()->intended('dashboard')->withSuccess('You have successfully logged in');
             }
@@ -57,6 +59,7 @@ class AuthController extends Controller
 
         return redirect("login")->withError('Oops! You have entered invalid credentials');
     }
+
     /**
      * Write code on Method
      *
@@ -75,7 +78,7 @@ class AuthController extends Controller
 
         Auth::login($user);
 
-        return redirect("dashboard")->withSuccess('Great! You have Successfully loggedin');
+        return redirect("dashboard")->withSuccess('Great! You have Successfully logged in');
     }
 
     /**
@@ -85,7 +88,7 @@ class AuthController extends Controller
      */
     public function dashboard()
     {
-        if(Auth::check()){
+        if (Auth::check()) {
             return view('dashboard');
         }
 
@@ -109,6 +112,16 @@ class AuthController extends Controller
 
         return redirect("login")->withSuccess('Oops! You do not have access');
     }
+
+    public function dashboardddd()
+    {
+        if (Auth::check()) {
+            return view('dashboardddd');
+        }
+
+        return redirect("login")->withSuccess('Oops! You do not have access');
+    }
+
     /**
      * Write code on Method
      *
@@ -116,11 +129,11 @@ class AuthController extends Controller
      */
     public function create(array $data)
     {
-      return User::create([
-        'name' => $data['name'],
-        'email' => $data['email'],
-        'password' => Hash::make($data['password'])
-      ]);
+        return User::create([
+            'name' => $data['name'],
+            'email' => $data['email'],
+            'password' => Hash::make($data['password']),
+        ]);
     }
 
     /**

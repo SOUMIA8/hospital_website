@@ -20,7 +20,7 @@ class PatientController extends Controller
     public function store(Request $request)
     {
         $validatedData = $request->validate([
-           'Nom_p' => 'required|string',
+        'Nom_p' => 'required|string',
         'Prenom_p' => 'required|string',
         'Adresse_p' => 'required|string',
         'Date_Naissance_p' => 'required|date',
@@ -29,6 +29,7 @@ class PatientController extends Controller
         'Email_p' => 'required|email',
         'Situation_Familiale' => 'required|string',
         'id_imm_assurance' => 'required|string',
+
             // Ajoutez les autres champs avec leurs règles de validation
         ]);
 
@@ -53,7 +54,7 @@ class PatientController extends Controller
     public function update(Request $request, $id)
     {
         $validatedData = $request->validate([
-            'Nom_p' => 'required|string',
+        'Nom_p' => 'required|string',
         'Prenom_p' => 'required|string',
         'Adresse_p' => 'required|string',
         'Date_Naissance_p' => 'required|date',

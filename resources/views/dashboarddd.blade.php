@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Dashboard</title>
+    <title>Dashboarddd</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
   </head>
 <body>
@@ -41,9 +41,9 @@
             </div>
         @endsession
 
-        <h1 class="display-5 fw-bold">Hi, Secrétaire  {{ auth()->user()->name }}</h1>
+        <h1 class="display-5 fw-bold">Bonjour, Secrétaire  {{ auth()->user()->name }}</h1>
         <p class="col-md-8 fs-4">Bienvenu dans ce site Ma médcine.<br/>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, eum! Eius ad, fugit consectetur molestiae ipsum iste veritatis molestias quas voluptas commodi provident magnam, ut rem porro eum, alias adipisci.</p>
-        <a href="#" class="btn btn-primary btn-lg">Demander</a>
+        <a href="{{route('secretaires.index')}}" class="btn btn-primary btn-lg">Dashboard</a>
 
       </div>
     </div>

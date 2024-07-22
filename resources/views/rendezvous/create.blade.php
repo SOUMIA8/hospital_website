@@ -3,42 +3,47 @@
 @section('content')
     <div class="container">
         <h2>Ajouter un Rendez-vous</h2>
-        <form action="{{ route('rendezvous.store') }}" method="POST">
+        <form action="{{ route('appointments.store') }}" method="POST">
             @csrf
             <div class="form-group">
-                <label for="Date_heure">Date et Heure :</label>
-                <input type="datetime-local" name="Date_heure" id="Date_heure" class="form-control">
+                <label for="Date_heure_">Date et Heure :</label>
+                <input type="datetime-local" name="Date_heure_" id="Date_heure_" class="form-control" required>
             </div>
             <div class="form-group">
-                <label for="id_p">Patient :</label>
-                <select name="id_p" id="id_p" class="form-control">
+                <label for="nom_patient_">Patient :</label>
+                <select name="nom_patient_" id="nom_patient_" class="form-control" required>
                     @foreach ($patients as $patient)
-                        <option value="{{ $patient->id_p }}">{{ $patient->Nom_p }} {{ $patient->Prenom_p }}</option>
+                        <option value="{{ $patient->Nom_p }} {{ $patient->Prenom_p }}">{{ $patient->Nom_p }} {{ $patient->Prenom_p }}</option>
                     @endforeach
                 </select>
             </div>
             <div class="form-group">
-                <label for="id_m">Médecin :</label>
-                <select name="id_m" id="id_m" class="form-control">
-                    <!-- Ajoutez les options pour les médecins -->
+                <label for="nom_medecin_">Médecin :</label>
+                <select name="nom_medecin_" id="nom_medecin_" class="form-control" required>
+                    <option value="ranya">Ranya</option>
+                    <option value="soumia">Soumia</option>
+                    <option value="saad">Saad</option>
                 </select>
             </div>
             <div class="form-group">
-                <label for="id_s"> Secrétaire :</label>
-                <select name="id_s" id="id_s" class="form-control">
-                    <!-- Ajoutez les options pour les secrétaires -->
+                <label for="nom_secretaire_">Secrétaire :</label>
+                <select name="nom_secretaire_" id="nom_secretaire_" class="form-control" required>
+                    <option value="hiba">Hiba</option>
+                    <option value="hind">Hind</option>
+                    <option value="ahmed">Ahmed</option>
+                    <option value="aya">Aya</option>
                 </select>
             </div>
             <div class="form-group">
-                <label for="id_a">Acte (optionnel) :</label>
-                <select name="id_a" id="id_a" class="form-control">
-                    <!-- Ajoutez les options pour les actes si nécessaire -->
+                <label for="nom_acte_">Acte (optionnel) :</label>
+                <select name="nom_acte_" id="nom_acte_" class="form-control">
+                    <option value="">Sélectionnez un acte</option>
+                    @foreach ($actes as $acte)
+                        <option value="{{ $acte->description }}">{{ $acte->description }}</option>
+                    @endforeach
                 </select>
             </div>
-            <!-- Ajoutez d'autres champs du formulaire pour le rendez-vous ici -->
-
             <button type="submit" class="btn btn-primary">Ajouter Rendez-vous</button>
         </form>
     </div>
 @endsection
-

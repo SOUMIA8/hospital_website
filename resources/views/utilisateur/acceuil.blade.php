@@ -1,11 +1,16 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Site Médical</title>
     <link rel="stylesheet" href="{{ asset('css/acceuil.css') }}">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet"
+        href="https://cdn-uicons.flaticon.com/2.4.2/uicons-regular-straight/css/uicons-regular-straight.css">
     {{-- <script>
         document.addEventListener("DOMContentLoaded", function() {
             document.getElementById("btn_inscrire").addEventListener("click", function() {
@@ -68,6 +73,7 @@
         });
     </script>
 </head>
+
 <body>
     <!-- Navbar -->
     <nav class="navbar">
@@ -83,11 +89,11 @@
             <li><a href="#contact" class="menu">Contactez-nous</a></li>
         </ul>
         <div class="container mt-5">
-        <div class="auth-buttons">
-            <a href="{{ route('login') }}" class="btn auth-btn" id="btn_connecter">Login</a>
-            <a href="{{ route('register') }}" class="btn auth-btn" id="btn_inscrire">Register</a>
+            <div class="auth-buttons">
+                <a href="{{ route('login') }}" class="btn auth-btn" id="btn_connecter">Login</a>
+                <a href="{{ route('register') }}" class="btn auth-btn" id="btn_inscrire">Register</a>
+            </div>
         </div>
-    </div>
     </nav>
 
     <!-- Contenu principal -->
@@ -103,64 +109,107 @@
     <!-- Infos sur l'hôpital -->
     <section class="hospital-info animate" id="services">
         <div class="hospital-info1">
-            <div class="info-box" id="info1">
-                <h2>Informations Utiles</h2>
-                <p>Insérez ici des informations importantes sur l'hôpital Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente, distinctio tenetur? Necessitatibus debitis rerum fugit eum vero deserunt perferendis incidunt tempora molestiae dolores, dolore numquam aliquam temporibus modi delectus veritatis?</p>
+            <div class="info-box" id="1">
+                <i class="fa-solid fa-heart-pulse"></i>
+                <h2>Cardiologie</h2>
+                <p>La cardiologie est la spécialité médicale qui étudie le cœur et les vaisseaux sanguins. Elle traite
+                    les maladies cardiovasculaires telles que les maladies coronariennes, les troubles du rythme
+                    cardiaque et les malformations cardiaques.</p>
             </div>
-            <div class="info-box" id="info2">
-                <h2>Services</h2>
-                <p>Découvrez nos services médicaux spécialisés Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et enim deserunt consectetur non, ut ratione eaque, eius consequatur magnam, accusamus iusto sed dignissimos veritatis asperiores doloremque. Molestiae sit pariatur dicta!</p>
+            <div class="info-box" id="2">
+                <i class="fi fi-rs-ambulance"></i>
+                <h2>Urgences</h2>
+                <p>Les urgences sont dédiées à la prise en charge immédiate des patients souffrant de traumatismes
+                    graves, d'accidents, ou de maladies nécessitant une intervention médicale rapide.</p>
             </div>
-            <div class="info-box " id="info3">
-                <h2>Équipe</h2>
-                <p>Rencontrez notre équipe de professionnels dévoués Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi nemo blanditiis, eaque hic facere sint doloremque impedit omnis illo eius delectus eveniet optio laborum, explicabo quo consequatur reprehenderit culpa pariatur.</p>
+            <div class="info-box" id="3">
+                <i class="fa-solid fa-flask-vial"></i>
+                <h2>Laboratoire</h2>
+                <p>Le laboratoire médical effectue des analyses cliniques pour diagnostiquer les maladies et évaluer
+                    l'état de santé des patients. Il couvre des domaines comme l'hématologie, la microbiologie, la
+                    biochimie, et l'immunologie.</p>
             </div>
         </div>
         <div class="hospital-info1">
-            <div class="info-box" id="info1">
-                <h2>Informations Utiles</h2>
-                <p>Insérez ici des informations importantes sur l'hôpital Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente, distinctio tenetur? Necessitatibus debitis rerum fugit eum vero deserunt perferendis incidunt tempora molestiae dolores, dolore numquam aliquam temporibus modi delectus veritatis?</p>
+            <div class="info-box" id="4">
+                <i class="fa-solid fa-eye"></i>
+                <h2>Ophtalmologie</h2>
+                <p>L'ophtalmologie traite les maladies et les troubles de la vue, ainsi que les affections affectant les
+                    yeux et les structures périoculaires.</p>
             </div>
-            <div class="info-box" id="info2">
-                <h2>Services</h2>
-                <p>Découvrez nos services médicaux spécialisés Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et enim deserunt consectetur non, ut ratione eaque, eius consequatur magnam, accusamus iusto sed dignissimos veritatis asperiores doloremque. Molestiae sit pariatur dicta!</p>
+            <div class="info-box" id="5">
+                <i class="fi fi-rs-pulse"></i>
+                <h2>Radiologie</h2>
+                <p>La radiologie utilise des techniques d'imagerie médicale comme les rayons X, l'échographie et l'IRM
+                    pour diagnostiquer les maladies et les traumatismes internes.</p>
             </div>
-            <div class="info-box " id="info3">
-                <h2>Équipe</h2>
-                <p>Rencontrez notre équipe de professionnels dévoués Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi nemo blanditiis, eaque hic facere sint doloremque impedit omnis illo eius delectus eveniet optio laborum, explicabo quo consequatur reprehenderit culpa pariatur.</p>
+            <div class="info-box" id="6">
+                <i class="fa-solid fa-tooth"></i>
+                <h2>Dentisterie</h2>
+                <p>La dentisterie se concentre sur la santé bucco-dentaire, le diagnostic et le traitement des maladies
+                    et des conditions affectant les dents, les gencives et les structures environnantes.</p>
+            </div>
+        </div>
+        <div class="hospital-info1">
+            <div class="info-box" id="7">
+                <i class="fa-solid fa-stethoscope"></i>
+                <h2>Physiothérapie</h2>
+                <p>La physiothérapie vise à restaurer le mouvement et la fonction chez les patients souffrant de
+                    blessures musculo-squelettiques, de troubles neurologiques, ou après une chirurgie.</p>
+            </div>
+            <div class="info-box" id="8">
+                <i class="fa-solid fa-notes-medical"></i>
+                <h2>Médecine Générale</h2>
+                <p>La médecine générale couvre une gamme variée de soins primaires et de services médicaux non
+                    spécialisés, assurant la gestion globale de la santé des patients.</p>
+            </div>
+            <div class="info-box" id="9">
+                <i class="fi fi-rs-head-side-brain"></i>
+                <h2>Neurologie</h2>
+                <p>La neurologie est la branche de la médecine qui étudie les troubles du système nerveux, y compris le
+                    cerveau, la moelle épinière et les nerfs périphériques.</p>
             </div>
         </div>
     </section>
-    <section class="questions " id="question" >
+
+    <section class="questions " id="question">
         <div class="questionContainer">
             <div class="question">
-                <div class="icone animate">
-                    <img src="{{asset('images/services.png')}}" alt="services">
+                <div class="icone ">
+                    <img src="{{ asset('images/services.png') }}" alt="services">
                     <h3>Quels sont les services médicaux offerts par L'Hopital ?</h3>
                 </div>
-               <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet animi ipsam, amet repudiandae ut debitis blanditiis. Eligendi consectetur odit ab deleniti, excepturi molestiae ullam officia aspernatur fugit voluptate, obcaecati quo?</p>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet animi ipsam, amet repudiandae ut
+                    debitis blanditiis. Eligendi consectetur odit ab deleniti, excepturi molestiae ullam officia
+                    aspernatur fugit voluptate, obcaecati quo?</p>
             </div>
 
             <div class="question">
-                <div class="icone animate">
-                    <img src="{{asset('images/rend.png')}}" alt="services">
+                <div class="icone">
+                    <img src="{{ asset('images/rend.png') }}" alt="services">
                     <h3>Comment puis-je prendre rendez-vous avec un médecin ou une téleconsultation ?</h3>
                 </div>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem velit molestias veniam, deleniti officia eius aliquid ab minus voluptate cum, facere expedita excepturi, ex maxime explicabo vero dolorum? Rem, mollitia.</p>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem velit molestias veniam, deleniti
+                    officia eius aliquid ab minus voluptate cum, facere expedita excepturi, ex maxime explicabo vero
+                    dolorum? Rem, mollitia.</p>
             </div>
             <div class="question">
-                <div class="icone animate">
-                    <img src="{{asset('images/horaires.png')}}" alt="services">
+                <div class="icone">
+                    <img src="{{ asset('images/horaires.png') }}" alt="services">
                     <h3>Quels sont vos horaires d'ouverture ?</h3>
                 </div>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur beatae maxime iusto, dolorem optio nesciunt corporis labore. Praesentium distinctio voluptas porro quaerat beatae quam accusantium voluptates tenetur, vitae magni error.</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur beatae maxime iusto, dolorem
+                    optio nesciunt corporis labore. Praesentium distinctio voluptas porro quaerat beatae quam
+                    accusantium voluptates tenetur, vitae magni error.</p>
             </div>
             <div class="question">
-                <div class="icone animate">
-                    <img src="{{asset('images/asssurance.png')}}" alt="services">
+                <div class="icone ">
+                    <img src="{{ asset('images/asssurance.png') }}" alt="services">
                     <h3>Acceptez-vous les assurances santé et quelles sont-elles ?</h3>
                 </div>
-             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum quos eum ducimus ab sit ea, repudiandae iste porro placeat quibusdam est temporibus, ut, fugiat aliquam vel et atque distinctio praesentium?</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum quos eum ducimus ab sit ea,
+                    repudiandae iste porro placeat quibusdam est temporibus, ut, fugiat aliquam vel et atque distinctio
+                    praesentium?</p>
             </div>
         </div>
     </section>
@@ -171,7 +220,14 @@
     <section class="team-section animate" id="docteurs">
         <div class="team-description">
             <h2 id="team-id">Notre Équipe et Notre Travail</h2>
-            <p>Une description sur le travail d'équipe et la fiabilité dans notre hôpital Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est aut voluptatum amet consequuntur laborum, id veritatis sunt deserunt necessitatibus, inventore vel animi debitis similique, sapiente molestias sit natus numquam impedit! Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus suscipit officiis voluptatum ad aperiam illo sint nulla enim quo nisi! Nobis quos ratione quam quibusdam recusandae illo natus assumenda expedita! Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic ipsum enim nam eum molestias sint culpa quis reiciendis quibusdam facere adipisci ab perferendis, id ut doloremque? Nihil ad quae voluptas.</p>
+            <p>Une description sur le travail d'équipe et la fiabilité dans notre hôpital Lorem, ipsum dolor sit amet
+                consectetur adipisicing elit. Est aut voluptatum amet consequuntur laborum, id veritatis sunt deserunt
+                necessitatibus, inventore vel animi debitis similique, sapiente molestias sit natus numquam impedit!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus suscipit officiis voluptatum ad
+                aperiam illo sint nulla enim quo nisi! Nobis quos ratione quam quibusdam recusandae illo natus assumenda
+                expedita! Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic ipsum enim nam eum molestias sint
+                culpa quis reiciendis quibusdam facere adipisci ab perferendis, id ut doloremque? Nihil ad quae
+                voluptas.</p>
         </div>
         <div class="team-image">
             <img src="{{ asset('images/team.jpg') }}" alt="Équipe médicale">
@@ -182,7 +238,7 @@
     <!-- Section Contact -->
     <section class="contact animate" id="contact">
         <div class="headform">
-            <img src="{{asset('images/logo.png')}}" alt="">
+            <img src="{{ asset('images/logo.png') }}" alt="">
             <h1>Contactez nous </h1>
         </div>
         <form action="#" method="post">
@@ -210,41 +266,41 @@
             <span class="logo-name">Ma médecine</span>
         </div>
         <div class="footer-content">
-        <div class="info">
-            <div class="hospital-info">
-                <i class="fa-solid fa-location-dot"></i>
-                <p>123 Rue de l'Hôpital Fes, Maroc</p>
-                <i class="fa-solid fa-envelope"></i>
-                <p>Email: contact@votrehopital.com</p>
-                <i class="fa-solid fa-phone"></i>
-                <p>Téléphone: +1234567890</p>
-            </div>
-            <div class="hospital-other">
-                <ul>
-                    <li><a href="#acceuil">Acceuil</a></li>
-                    <li><a href="">More information</a></li>
-                    <li><a href="">Documents utiles</a></li>
-                    <li><a href="">Prendre un rendez vous facile</a></li>
-                </ul>
-            </div>
-            <div class="hospital-other">
-                <ul>
-                    <li><a href="#acceuil">Acceuil</a></li>
-                    <li><a href="">More information</a></li>
-                    <li><a href="">Documents utiles</a></li>
-                    <li><a href="">Prendre un rendez vous facile</a></li>
-                </ul>
-            </div>
-            <div class="hospital-other">
-                <ul>
-                    <li><a href="#acceuil">Acceuil</a></li>
-                    <li><a href="">More information</a></li>
-                    <li><a href="">Documents utiles</a></li>
-                    <li><a href="">Prendre un rendez vous facile</a></li>
-                </ul>
-            </div>
+            <div class="info">
+                <div class="hospital-info">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <p>123 Rue de l'Hôpital Fes, Maroc</p>
+                    <i class="fa-solid fa-envelope"></i>
+                    <p>Email: contact@votrehopital.com</p>
+                    <i class="fa-solid fa-phone"></i>
+                    <p>Téléphone: +1234567890</p>
+                </div>
+                <div class="hospital-other">
+                    <ul>
+                        <li><a href="#acceuil">Acceuil</a></li>
+                        <li><a href="">More information</a></li>
+                        <li><a href="">Documents utiles</a></li>
+                        <li><a href="">Prendre un rendez vous facile</a></li>
+                    </ul>
+                </div>
+                <div class="hospital-other">
+                    <ul>
+                        <li><a href="#acceuil">Acceuil</a></li>
+                        <li><a href="">More information</a></li>
+                        <li><a href="">Documents utiles</a></li>
+                        <li><a href="">Prendre un rendez vous facile</a></li>
+                    </ul>
+                </div>
+                <div class="hospital-other">
+                    <ul>
+                        <li><a href="#acceuil">Acceuil</a></li>
+                        <li><a href="">More information</a></li>
+                        <li><a href="">Documents utiles</a></li>
+                        <li><a href="">Prendre un rendez vous facile</a></li>
+                    </ul>
+                </div>
 
-        </div>
+            </div>
             <div class="social-links">
                 <h3>Retrouvez-nous sur les Réseaux Sociaux</h3>
                 <div class="social-icons">
@@ -257,11 +313,15 @@
         </div>
         <div class="bottom-footer">
             <p>&copy; 2024 Votre Hôpital. Tous droits réservés.</p>
-            <a href="https://www.google.com/maps/search/localisation+centre+el+ghassani+fes+maroc/@34.0409533,-5.0045955,15.02z?entry=ttu">Trouvez-nous sur la carte de Localisation</a> <!-- Lien vers votre carte de position -->
+            <a
+                href="https://www.google.com/maps/search/localisation+centre+el+ghassani+fes+maroc/@34.0409533,-5.0045955,15.02z?entry=ttu">Trouvez-nous
+                sur la carte de Localisation</a> <!-- Lien vers votre carte de position -->
         </div>
     </footer>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/js/all.min.js" integrity="sha512-c5h5voUjQk0a1q74b5vW6vKs3vWPOdN8TAr2G6fl6cNg1C0eZrGGSoN1dCDGQWVNScc6z7Qw4B2C1BYUZt2c7g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/js/all.min.js"
+        integrity="sha512-c5h5voUjQk0a1q74b5vW6vKs3vWPOdN8TAr2G6fl6cNg1C0eZrGGSoN1dCDGQWVNScc6z7Qw4B2C1BYUZt2c7g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             const observerOptions = {
@@ -287,4 +347,5 @@
         });
     </script>
 </body>
+
 </html>

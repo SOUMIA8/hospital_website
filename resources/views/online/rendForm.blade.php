@@ -14,6 +14,9 @@
     const paragraph = document.querySelector('.firstDiv p');
     let index = 0;
 
+    // Initialize the paragraph text to an empty string
+    paragraph.textContent = '';
+
     function typeLetter() {
         if (index < text.length) {
             paragraph.textContent += text.charAt(index);
@@ -30,9 +33,9 @@
         typeLetter();
     }
 
+    // Start typing the text
     typeLetter();
 });
-
     </script>
     <style>
         #calendar {

@@ -36,9 +36,9 @@
 }
 
 .logo-name {
-    font-size: 2.2rem;
+    font-size: 2rem;
     font-weight: 600;
-    color: #85bffd;
+    color: #77b8fd;
 }
 
 .nav-links {
@@ -88,8 +88,6 @@
     transform: scaleX(1);
 }
 
-
-
 .auth-buttons {
     display: flex;
     justify-content: center;
@@ -117,8 +115,6 @@
     background-color: #6fb1f8;
 }
 
-
-
 /* Styles pour la Section de Bienvenue */
 .welcome-section {
     position: relative;
@@ -136,6 +132,7 @@
 .welcome-text h1 {
     font-size: 3rem;
     margin: 0;
+    color: #3c90e9;
 }
 
 .welcome-text p {
@@ -155,7 +152,7 @@
 
 
 /* Styles pour les Infos sur l'Hôpital */
-.hospital-info1 {
+ .hospital-info1 {
     display: flex;
     justify-content: space-between;
     padding: 4rem 10%;
@@ -163,27 +160,15 @@
 
 .info-box {
     flex: 1;
-    text-align: center;
     padding: 1.5rem;
     border-radius: 10px;
-    box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.6);
     margin: 0 10px;
     transition: all 1s ease;
+    background-color: #ffffff;
+    border: 3px solid #1CA7EC;
+}
 
-}
-
-#info1{
-    background-color: #ffffff;
-    border: 3px solid #1CA7EC;
-}
-#info2{
-    background-color: #ffffff;
-    border: 3px solid #1CA7EC;
-}
-#info3{
-    background-color: #ffffff;
-    border: 3px solid #1CA7EC;
-}
 .info-box:hover{
     transform: scale(1.05);
 }
@@ -192,6 +177,7 @@
     font-size: 1.5rem;
     margin-bottom: 1rem;
 }
+
 
 .info-box p {
     font-size: 1rem;
@@ -205,16 +191,20 @@
     margin-left: 10px;
 }
 .question{
-    background-color: #deecfa;
+    background-color: #ffffff;
     padding: 40px;
     margin-right: 20px;
-    border-radius: 10px;
+    /* border-radius: 10px; */
     width: 400px;
     height: 500px;
+    border:1px solid #a6d1fe ;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
 }
+
 .icone{
     display: inline-block;
     text-align: center;
+
 }
 .icone img{
     width: 60px;
@@ -222,6 +212,11 @@
 }
 .icone h3{
     font-weight: 800;
+}
+
+.info-box i {
+    font-size: 80px; /* Adjust icon size */
+    margin-bottom: 10px;
 }
 /* Styles pour la Section sur l'Équipe */
 .team-section {

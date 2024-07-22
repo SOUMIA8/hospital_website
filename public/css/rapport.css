@@ -6,6 +6,7 @@ body {
     background-image: url('../images/home.jpg');
     background-size: cover;
     background-position: center;
+    font-family: 'Poppins', sans-serif;
 }
 .head{
     display: flex;

@@ -22,8 +22,6 @@ class Patient extends Model
     // Relation avec les rendez-vous
     public function rendezVous()
     {
-        return $this->hasMany(RendezVous::class, 'id_p', 'id_p');
+        return $this->hasMany(Appo::class, 'nom_patient_', 'Nom_p');
     }
-
-    // Ajoutez d'autres relations au besoin
 }
