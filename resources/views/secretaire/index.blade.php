@@ -8,7 +8,7 @@
         <div class="col-md-12">
             <h2>Gestion des Patients</h2>
             <a href="{{ route('patients.create') }}" class="btn btn-primary mb-3">Ajouter un Patient</a>
-            <table class="table">
+            <table class="table table-bordered">
                 <thead>
                     <tr>
                         <th>ID</th>

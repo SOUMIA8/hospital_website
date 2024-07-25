@@ -7,7 +7,7 @@ use App\Models\Appo;
 use App\Models\Patient;
 use App\Models\Acte;
 
-class AppointmentControllerNew extends Controller
+class RendezvousController extends Controller
 {
     // Afficher la liste des rendez-vous
     public function index(Request $request)
@@ -31,7 +31,7 @@ class AppointmentControllerNew extends Controller
 
         $appointments = $query->get();
 
-        return view('rendezvous.index', compact('appointments'));
+        return view('rendezvousSecretaire.index', compact('appointments'));
     }
 
     // Afficher le formulaire de création d'un rendez-vous
@@ -39,7 +39,7 @@ class AppointmentControllerNew extends Controller
     {
         $actes = Acte::all();
         $patients = Patient::all();
-        return view('rendezvous.create', compact('actes', 'patients'));
+        return view('rendezvousSecretaire.create', compact('actes', 'patients'));
     }
 
     // Enregistrer un nouveau rendez-vous
@@ -61,14 +61,14 @@ class AppointmentControllerNew extends Controller
             'nom_acte_' => $request->input('nom_acte_'),
         ]);
 
-        return redirect()->route('appointments.index')->with('success', 'Rendez-vous créé avec succès.');
+        return redirect()->route('rendezsecretaire.index')->with('success', 'Rendez-vous créé avec succès.');
     }
 
     // Afficher un rendez-vous spécifique
     public function show($id)
     {
         $rdv = Appo::findOrFail($id);
-        return view('rendezvous.show', compact('rdv'));
+        return view('rendezvousSecretaire.show', compact('rdv'));
     }
 
     // Afficher le formulaire de modification d'un rendez-vous
@@ -77,7 +77,7 @@ class AppointmentControllerNew extends Controller
         $rdv= Appo::findOrFail($id);
         $actes = Acte::all();
         $patients = Patient::all();
-        return view('rendezvous.edit', compact('rdv', 'actes', 'patients'));
+        return view('rendezvousSecretaire.edit', compact('rdv', 'actes', 'patients'));
     }
 
     // Mettre à jour un rendez-vous
@@ -100,7 +100,7 @@ class AppointmentControllerNew extends Controller
             'nom_acte_' => $request->input('nom_acte_'),
         ]);
 
-        return redirect()->route('appointments.index')->with('success', 'Rendez-vous mis à jour avec succès.');
+        return redirect()->route('rendezsecretaire.index')->with('success', 'Rendez-vous mis à jour avec succès.');
     }
 
     // Supprimer un rendez-vous
@@ -109,6 +109,6 @@ class AppointmentControllerNew extends Controller
         $appointment = Appo::findOrFail($id);
         $appointment->delete();
 
-        return redirect()->route('appointments.index')->with('success', 'Rendez-vous supprimé avec succès.');
+        return redirect()->route('rendezsecretaire.index')->with('success', 'Rendez-vous supprimé avec succès.');
     }
 }

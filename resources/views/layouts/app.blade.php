@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Application de Gestion des Patients</title>
+    <title>Gestion des Patients</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     @yield('styles')
     <style>
@@ -52,10 +52,10 @@
     </nav>
     <div class="col-md-3">
         <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-            <a class="nav-link active" id="v-pills-patients-tab" data-toggle="pill" href="#v-pills-patients" role="tab" aria-controls="v-pills-patients" aria-selected="true">Patients</a>
-            <a class="nav-link" id="v-pills-rendezvous-tab" href="{{ route('appointments.index') }}">Rendez-vous</a>
-            <a class="nav-link" id="v-pills-factures-tab" href="{{ route('factures.index') }}">Factures</a>
-            <a class="nav-link" id="v-pills-rapports-tab" href="{{ route('hospitalization-reports.index') }}">Rapports</a>
+            <a class="nav-link {{ Request::routeIs('patients.index') ? 'active' : '' }}" id="v-pills-patients-tab" href="{{ route('patients.index') }}">Patients</a>
+            <a class="nav-link {{ Request::routeIs('appointments.index') ? 'active' : '' }}" id="v-pills-rendezvous-tab" href="{{ route('appointments.index') }}">Rendez-vous</a>
+            <a class="nav-link {{ Request::routeIs('factures.index') ? 'active' : '' }}" id="v-pills-factures-tab" href="{{ route('factures.index') }}">Factures</a>
+            <a class="nav-link {{ Request::routeIs('hospitalization-reports.index') ? 'active' : '' }}" id="v-pills-rapports-tab" href="{{ route('hospitalization-reports.index') }}">Rapports</a>
         </div>
     </div>
 

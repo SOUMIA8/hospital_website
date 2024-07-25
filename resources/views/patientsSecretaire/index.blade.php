@@ -1,6 +1,6 @@
 <!-- resources/views/patients/index.blade.php -->
 
-@extends('layouts.app')
+@extends('layouts.appSecretaire')
 
 @section('content')
 <div class="container">

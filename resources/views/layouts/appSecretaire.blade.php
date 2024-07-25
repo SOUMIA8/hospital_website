@@ -52,9 +52,8 @@
     </nav>
     <div class="col-md-3">
         <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-            <a class="nav-link active" id="v-pills-patients-tab" data-toggle="pill" href="#v-pills-patients" role="tab" aria-controls="v-pills-patients" aria-selected="true">Patients</a>
-            <a class="nav-link" id="v-pills-rendezvous-tab" href="#">Rendez-vous</a>
-            <a class="nav-link" id="v-pills-factures-tab" href="#">Factures et Rapports</a>
+            <a class="nav-link {{ Request::routeIs('patientsSecretaire.index') ? 'active' : '' }}" id="v-pills-patients-tab" data-toggle="pill" href="{{ route('patientsSecretaire.index') }}" role="tab" aria-controls="v-pills-patients" aria-selected="{{ Request::routeIs('patientsSecretaire.index') ? 'true' : 'false' }}">Patients</a>
+            <a class="nav-link {{ Request::routeIs('rendezsecretaire.index') ? 'active' : '' }}" id="v-pills-rendezvous-tab" href="{{ route('rendezsecretaire.index') }}" role="tab" aria-controls="v-pills-rendezvous" aria-selected="{{ Request::routeIs('rendezsecretaire.index') ? 'true' : 'false' }}">Rendez-vous</a>
 
         </div>
     </div>

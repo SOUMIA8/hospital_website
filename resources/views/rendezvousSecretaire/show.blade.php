@@ -42,7 +42,7 @@
 
 
 
-@extends('layouts.app')
+@extends('layouts.appSecretaire')
 
 @section('content')
     <div class="container">
@@ -55,7 +55,7 @@
                 <p><strong>Secrétaire :</strong> {{ $rdv->nom_secretaire_ }}</p>
                 <p><strong>Acte :</strong> {{ $rdv->nom_acte_ }}</p>
             </div>
-            <a href="{{ route('appointments.index') }}" class="btn btn-primary">Retour à la liste des rendez-vous</a>
+            <a href="{{ route('appointments.index') }}" class="btn btn-secondary">Retour à la liste des rendez-vous</a>
         </div>
     </div>
 
@@ -90,9 +90,25 @@
         .details-card strong {
             color: #007bff;
         }
-        .btn-primary{
-            margin-top: 20px;
+
+        .btn-secondary {
+            background-color: #6c757d;
+            border-color: #6c757d;
+            color: #ffffff;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 8px;
+            transition: background-color 0.3s, border-color 0.3s;
+            text-decoration: none;
         }
 
+        .btn-secondary:hover {
+            background-color: #5a6268;
+            border-color: #545b62;
+        }
+
+        .btn-secondary:focus {
+            box-shadow: 0 0 0 0.2rem rgba(108, 117, 125, 0.5);
+        }
     </style>
 @endsection

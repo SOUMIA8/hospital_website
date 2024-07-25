@@ -11,7 +11,7 @@
             <div class="form-column">
                 <div class="head">
                     <img src="{{asset('images/logo.png')}}" alt="">
-                    <h1>Rapport de Hospitalisation</h1>
+                    <h1>Rapport d'Hospitalisation</h1>
                 </div>
                 <div>
                     <label for="name">Nom:</label>

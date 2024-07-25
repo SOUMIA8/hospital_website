@@ -9,12 +9,20 @@ class Acte extends Model
 {
     use HasFactory;
 
-    protected $table = 'actes'; // Nom de la table associée
-    protected $primaryKey = 'id_a'; // Clé primaire de la table
+    protected $primaryKey = 'id_a'; // Définir la clé primaire personnalisée si nécessaire
 
-    // Colonnes pouvant être assignées en masse
     protected $fillable = [
         'cout',
         'description',
     ];
+
+    // Si vous n'avez pas besoin de gérer manuellement les timestamps
+    // public $timestamps = false;
+
+    // Définir les relations s'il y en a
+    // Exemple de relation avec d'autres modèles :
+    // public function rendezvous()
+    // {
+    //     return $this->hasMany(RendezVous::class, 'id_a', 'id_a');
+    // }
 }

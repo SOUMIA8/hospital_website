@@ -45,10 +45,10 @@
                         </div>
                     @endsession
 
-                    <h1 class="display-5 fw-bold">Hi,Patient {{ auth()->user()->name }}</h1>
-                    <p class="col-md-8 fs-4">Bienvenu dans ce site Ma médcine.<br />Lorem ipsum dolor sit amet
-                        consectetur adipisicing elit. Fugit, eum! Eius ad, fugit consectetur molestiae ipsum iste
-                        veritatis molestias quas voluptas commodi provident magnam, ut rem porro eum, alias adipisci.
+                    <h1 class="display-5 fw-bold">Patient {{ auth()->user()->name }}</h1>
+                    <p class="col-md-8 fs-4">Bienvenue sur la page de connexion Ma Médecine.<br />Votre plateforme dédiée à la gestion de vos rendez-vous et consultations
+                        médicales. Accédez facilement à vos informations médicales et bénéficiez d'un suivi personnalisé
+                        grâce à notre interface intuitive et sécurisée.
                     </p>
                     <a href="{{ route('request.index') }}" class="btn btn-primary btn-lg">Demander</a>
 

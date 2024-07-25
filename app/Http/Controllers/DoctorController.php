@@ -37,7 +37,7 @@ class DoctorController extends Controller
 
             [
                 'name' => 'Dr. Marie Curie',
-                'photo' => 'doctor1.png',
+                'photo' => 'medecin4.png',
                 'specialty' => 'Oncologue',
                 'phone' => '123-456-7891',
                 'email' => 'marie.curie@gmail.com',
@@ -53,7 +53,7 @@ class DoctorController extends Controller
             ],
             [
                 'name' => 'Dr. Marie Curie',
-                'photo' => 'doctor7.png',
+                'photo' => 'medecin3.png',
                 'specialty' => 'Oncologue',
                 'phone' => '123-456-7891',
                 'email' => 'marie.curie@gmail.com',
@@ -62,7 +62,7 @@ class DoctorController extends Controller
 
             [
                 'name' => 'Dr. Marie Curie',
-                'photo' => 'doctor4.png',
+                'photo' => 'doctor8.png',
                 'specialty' => 'Oncologue',
                 'phone' => '123-456-7891',
                 'email' => 'marie.curie@gmail.com',
@@ -70,7 +70,7 @@ class DoctorController extends Controller
             ],
             [
                 'name' => 'Dr. Marie Curie',
-                'photo' => 'doctor5.png',
+                'photo' => 'medecin1.png',
                 'specialty' => 'Oncologue',
                 'phone' => '123-456-7891',
                 'email' => 'marie.curie@gmail.com',
@@ -78,7 +78,7 @@ class DoctorController extends Controller
             ],
             [
                 'name' => 'Dr. Marie Curie',
-                'photo' => 'doctor2.png',
+                'photo' => 'medecin2.png',
                 'specialty' => 'Oncologue',
                 'phone' => '123-456-7891',
                 'email' => 'marie.curie@gmail.com',

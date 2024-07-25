@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 use Barryvdh\DomPDF\Facade\Pdf as PDF;
 use App\Models\HospitalizationReport;
 use Illuminate\Http\Request;
+use App\Models\Patient;
+
 
 class HospitalizationReportController extends Controller
 {
@@ -92,4 +94,6 @@ class HospitalizationReportController extends Controller
         // Télécharger le PDF
         return $pdf->download('hospitalization-report.pdf');
     }
+
+
 }

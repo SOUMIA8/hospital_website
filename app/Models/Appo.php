@@ -16,20 +16,9 @@ class Appo extends Model
 
     protected $table = 'appo'; // Assurez-vous que la table correspond au nom de votre migration
 
-
-    public function patient()
-    {
-        return $this->belongsTo(Patient::class, 'nom_patient_', 'Nom_p');
-    }
-
-    // public function medecin()
-    // {
-    //     return $this->belongsTo(Medecin::class, 'nom_medecin_', 'Nom_m');
-    // }
-
-    // public function acte()
-    // {
-    //     return $this->belongsTo(Acte::class, 'nom_acte_', 'description'); // Adjust the foreign key and local key as necessary
-    // }
     // Définir d'autres relations si nécessaire, par exemple avec Patient, Medecin, Secretaire, etc.
-}
+    public function acte()
+    {
+        return Acte::where('description', $this->nom_acte_)->first();
+    }
+    }

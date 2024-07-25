@@ -1,5 +1,5 @@
 <!-- resources/views/patients/create.blade.php -->
-@extends('layouts.app')
+@extends('layouts.appSecretaire')
 
 @section('content')
     <div class="container">
@@ -46,7 +46,7 @@
                 <input type="text" class="form-control" id="id_imm_assurance" name="id_imm_assurance">
             </div>
             <!-- Ajouter un bouton pour accéder aux factures -->
-            <a href="{{ route('factures.index') }}" class="btn btn-secondary">Voir les Factures</a>
+            {{-- <a href="{{ route('factures.index') }}" class="btn btn-secondary">Voir les Factures</a> --}}
             <!-- Ajouter d'autres champs du formulaire si nécessaire -->
             <button type="submit" class="btn btn-primary">Enregistrer</button>
         </form>

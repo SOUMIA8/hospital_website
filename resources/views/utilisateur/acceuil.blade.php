@@ -108,7 +108,7 @@
 
     <!-- Infos sur l'hôpital -->
     <section class="hospital-info animate" id="services">
-        <div class="hospital-info1">
+        {{-- <div class="hospital-info1">
             <div class="info-box" id="1">
                 <i class="fa-solid fa-heart-pulse"></i>
                 <h2>Cardiologie</h2>
@@ -168,6 +168,102 @@
                 <h2>Neurologie</h2>
                 <p>La neurologie est la branche de la médecine qui étudie les troubles du système nerveux, y compris le
                     cerveau, la moelle épinière et les nerfs périphériques.</p>
+            </div>
+        </div> --}}
+        <div class="hopital-services">
+            <div class="info-service">
+                <div class="head-service">
+                    <i class="fa-solid fa-heart-pulse"></i>
+                    <h2>Services</h2>
+                </div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, maxime accusantium quod provident
+                        totam repudiandae non fuga tempora minus commodi dolores nobis facilis, necessitatibus, expedita
+                        a veritatis eaque in eveniet.
+                    </p>
+            </div>
+            <div class="info-service">
+                <div class="head-service">
+                    <i class="fi fi-rs-ambulance"></i>
+                    <h2>Services</h2>
+                </div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, maxime accusantium quod provident
+                        totam repudiandae non fuga tempora minus commodi dolores nobis facilis, necessitatibus, expedita
+                        a veritatis eaque in eveniet.
+                    </p>
+            </div>
+            <div class="info-service">
+                <div class="head-service">
+                    <i class="fa-solid fa-flask-vial"></i>
+                    <h2>Services</h2>
+                </div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, maxime accusantium quod provident
+                        totam repudiandae non fuga tempora minus commodi dolores nobis facilis, necessitatibus, expedita
+                        a veritatis eaque in eveniet.
+                    </p>
+            </div>
+        </div>
+        <div class="hopital-services">
+            <div class="info-service">
+                <div class="head-service">
+                    <i class="fa-solid fa-eye"></i>
+                    <h2>Services</h2>
+                </div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, maxime accusantium quod provident
+                        totam repudiandae non fuga tempora minus commodi dolores nobis facilis, necessitatibus, expedita
+                        a veritatis eaque in eveniet.
+                    </p>
+            </div>
+            <div class="info-service">
+                <div class="head-service">
+                    <i class="fa-solid fa-tooth"></i>
+                    <h2>Services</h2>
+                </div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, maxime accusantium quod provident
+                        totam repudiandae non fuga tempora minus commodi dolores nobis facilis, necessitatibus, expedita
+                        a veritatis eaque in eveniet.
+                    </p>
+            </div>
+            <div class="info-service">
+                <div class="head-service">
+                    <i class="fa-solid fa-stethoscope"></i>
+                    <h2>Services</h2>
+                </div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, maxime accusantium quod provident
+                        totam repudiandae non fuga tempora minus commodi dolores nobis facilis, necessitatibus, expedita
+                        a veritatis eaque in eveniet.
+                    </p>
+            </div>
+        </div>
+        <div class="hopital-services">
+            <div class="info-service">
+                <div class="head-service">
+                    <i class="fa-solid fa-notes-medical"></i>
+                    <h2>Services</h2>
+                </div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, maxime accusantium quod provident
+                        totam repudiandae non fuga tempora minus commodi dolores nobis facilis, necessitatibus, expedita
+                        a veritatis eaque in eveniet.
+                    </p>
+            </div>
+            <div class="info-service">
+                <div class="head-service">
+                    <i class="fi fi-rs-pulse"></i>
+                    <h2>Services</h2>
+                </div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, maxime accusantium quod provident
+                        totam repudiandae non fuga tempora minus commodi dolores nobis facilis, necessitatibus, expedita
+                        a veritatis eaque in eveniet.
+                    </p>
+            </div>
+            <div class="info-service">
+                <div class="head-service">
+                    <i class="fi fi-rs-head-side-brain"></i>
+                    <h2>Services</h2>
+                </div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, maxime accusantium quod provident
+                        totam repudiandae non fuga tempora minus commodi dolores nobis facilis, necessitatibus, expedita
+                        a veritatis eaque in eveniet.
+                    </p>
             </div>
         </div>
     </section>

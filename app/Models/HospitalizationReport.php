@@ -26,4 +26,6 @@ class HospitalizationReport extends Model
         'treatment',
         'follow_up_date'
     ];
+
+
 }

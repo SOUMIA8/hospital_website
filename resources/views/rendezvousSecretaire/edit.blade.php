@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.appSecretaire')
 
 @section('content')
     <div class="container">
@@ -47,7 +47,7 @@
 
     <!-- CSS spécifique à cette vue -->
     <style>
-        /* .page-title {
+        .page-title {
             color: #343a40;
             margin-bottom: 30px;
             font-size: 24px;
@@ -77,6 +77,7 @@
         .form-group select {
             border-radius: 8px;
             border: 1px solid #ced4da;
+            padding: 10px;
             width: 100%;
             transition: border-color 0.3s, box-shadow 0.3s;
         }
@@ -105,6 +106,6 @@
 
         .btn-primary:focus {
             box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5);
-        } */
+        }
     </style>
 @endsection

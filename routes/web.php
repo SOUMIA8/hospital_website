@@ -2,7 +2,6 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PatientController;
-use App\Http\Controllers\RendezVousController;
 use App\Http\Controllers\FactureController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\choiseController;
@@ -13,10 +12,11 @@ use App\Http\Controllers\Auth\AuthController;
 use App\Http\Controllers\DoctorController;
 use App\Http\Controllers\RequestController;
 use App\Http\Controllers\SecretaireController;
-use App\Http\Controllers\AppointmentController;
 use App\Http\Controllers\ChefController;
 use App\Http\Controllers\AppointmentControllerNew;
-
+use App\Http\Controllers\RendezvousController;
+use App\Http\Controllers\PatientSecretaire;
+use App\Http\Controllers\InvoiceController;
 
 // Routes pour les patients
 Route::get('/patients', [PatientController::class, 'index'])->name('patients.index');
@@ -28,6 +28,15 @@ Route::put('/patients/{id}', [PatientController::class, 'update'])->name('patien
 Route::delete('/patients/{id}', [PatientController::class, 'destroy'])->name('patients.destroy');
 Route::get('/patients/search', [PatientController::class, 'search'])->name('patients.search');
 
+//patientsSecretaire:
+
+Route::get('/patientsSecretaire', [PatientSecretaire::class, 'index'])->name('patientsSecretaire.index');
+Route::get('/patientsSecretaire/create', [PatientSecretaire::class, 'create'])->name('patientsSecretaire.create');
+Route::post('/patientsSecretaire', [PatientSecretaire::class, 'store'])->name('patientsSecretaire.store');
+Route::get('/patientsSecretaire/{id}', [PatientSecretaire::class, 'show'])->name('patientsSecretaire.show');
+Route::get('/patientsSecretaire/{id}/edit', [PatientSecretaire::class, 'edit'])->name('patientsSecretaire.edit');
+Route::put('/patientsSecretaire/{id}', [PatientSecretaire::class, 'update'])->name('patientsSecretaire.update');
+Route::delete('/patientsSecretaire/{id}', [PatientSecretaire::class, 'destroy'])->name('patientsSecretaire.destroy');
      //Appointment
 
 
@@ -38,14 +47,20 @@ Route::get('/appointments/{id}', [AppointmentControllerNew::class, 'show'])->nam
 Route::get('/appointments/{id}/edit', [AppointmentControllerNew::class, 'edit'])->name('appointments.edit');
 Route::put('/appointments/{id}', [AppointmentControllerNew::class, 'update'])->name('appointments.update');
 Route::delete('/appointments/{id}', [AppointmentControllerNew::class, 'destroy'])->name('appointments.destroy');
+
+//rendez vous secrataire:
+
+Route::get('/rendezsecretaire', [RendezvousController::class, 'index'])->name('rendezsecretaire.index');
+Route::get('/rendezsecretaire/create', [RendezvousController::class, 'create'])->name('rendezsecretaire.create');
+Route::post('/rendezsecretaire', [RendezvousController::class, 'store'])->name('rendezsecretaire.store');
+Route::get('/rendezsecretaire/{id}', [RendezvousController::class, 'show'])->name('rendezsecretaire.show');
+Route::get('/rendezsecretaire/{id}/edit', [RendezvousController::class, 'edit'])->name('rendezsecretaire.edit');
+Route::put('/rendezsecretaire/{id}', [RendezvousController::class, 'update'])->name('rendezsecretaire.update');
+Route::delete('/rendezsecretaire/{id}', [RendezvousController::class, 'destroy'])->name('rendezsecretaire.destroy');
 // Routes pour les factures
-Route::get('/factures', [FactureController::class, 'index'])->name('factures.index');
-Route::get('/factures/create', [FactureController::class, 'create'])->name('factures.create');
-Route::post('/factures', [FactureController::class, 'store'])->name('factures.store');
-Route::get('/factures/{id}', [FactureController::class, 'show'])->name('factures.show');
-Route::get('/factures/{id}/edit', [FactureController::class, 'edit'])->name('factures.edit');
-Route::put('/factures/{id}', [FactureController::class, 'update'])->name('factures.update');
-Route::delete('/factures/{id}', [FactureController::class, 'destroy'])->name('factures.destroy');
+//factures
+Route::get('factures', [FactureController::class, 'index'])->name('factures.index');
+Route::get('factures/pdf/{id}', [FactureController::class, 'generatePDF'])->name('factures.pdf');
 
 
 
@@ -161,3 +176,7 @@ Route::get('/medecins/{id}/edit', [ChefController::class, 'edit'])->name('medeci
 Route::put('/medecins/{id}', [ChefController::class, 'update'])->name('medecins.update');
 Route::delete('/medecins/{id}', [ChefController::class, 'destroy'])->name('medecins.destroy');
 Route::get('/medecins/search', [ChefController::class, 'search'])->name('medecins.search');
+
+
+
+
